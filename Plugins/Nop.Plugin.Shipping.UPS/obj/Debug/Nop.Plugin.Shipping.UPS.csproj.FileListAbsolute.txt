@@ -1,0 +1,8 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.UPS\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.UPS\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.dll.config
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.UPS\obj\Debug\Nop.Plugin.Shipping.UPS.csprojResolveAssemblyReference.cache
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.UPS\obj\Debug\Nop.Plugin.Shipping.UPS.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.UPS\obj\Debug\Nop.Plugin.Shipping.UPS.pdb

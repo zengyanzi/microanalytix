@@ -1,0 +1,6 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Nop.Plugin.Tax.CountryStateZip.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.CountryStateZip\Nop.Plugin.Tax.CountryStateZip.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Tax.CountryStateZip\obj\Debug\Nop.Plugin.Tax.CountryStateZip.pdb

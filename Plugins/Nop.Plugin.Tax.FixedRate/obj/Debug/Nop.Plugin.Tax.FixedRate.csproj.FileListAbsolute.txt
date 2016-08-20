@@ -1,0 +1,7 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.FixedRate\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.FixedRate\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Tax.FixedRate\Nop.Plugin.Tax.FixedRate.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.csprojResolveAssemblyReference.cache
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Tax.FixedRate\obj\Debug\Nop.Plugin.Tax.FixedRate.pdb

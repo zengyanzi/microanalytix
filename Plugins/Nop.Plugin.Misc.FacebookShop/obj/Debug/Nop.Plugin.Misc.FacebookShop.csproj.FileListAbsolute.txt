@@ -1,0 +1,15 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\logo.gif
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\top-menu-background.png
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\top-menu-divider.png
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\top-menu-list-image-hover.png
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\top-menu-list-image.png
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\images\top-menu-triangle.png
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Content\styles.css
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Scripts\jquery-1.10.2.min.js
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Nop.Plugin.Misc.FacebookShop.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.FacebookShop\Nop.Plugin.Misc.FacebookShop.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.csprojResolveAssemblyReference.cache
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Misc.FacebookShop\obj\Debug\Nop.Plugin.Misc.FacebookShop.pdb

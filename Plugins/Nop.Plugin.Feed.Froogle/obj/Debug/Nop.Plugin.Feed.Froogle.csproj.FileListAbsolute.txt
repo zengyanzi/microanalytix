@@ -1,0 +1,8 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Feed.Froogle\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Feed.Froogle\Content\styles.css
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Feed.Froogle\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Feed.Froogle\Nop.Plugin.Feed.Froogle.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.csprojResolveAssemblyReference.cache
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Feed.Froogle\obj\Debug\Nop.Plugin.Feed.Froogle.pdb

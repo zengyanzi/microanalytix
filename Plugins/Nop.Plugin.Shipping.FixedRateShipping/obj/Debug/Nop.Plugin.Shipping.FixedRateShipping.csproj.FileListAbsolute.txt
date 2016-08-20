@@ -1,0 +1,7 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Nop.Plugin.Shipping.FixedRateShipping.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.FixedRateShipping\Nop.Plugin.Shipping.FixedRateShipping.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.FixedRateShipping\obj\Debug\Nop.Plugin.Shipping.FixedRateShipping.csprojResolveAssemblyReference.cache

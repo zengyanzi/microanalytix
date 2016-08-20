@@ -1,0 +1,7 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.HasOneProduct\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.DiscountRules.HasOneProduct\obj\Debug\Nop.Plugin.DiscountRules.HasOneProduct.csprojResolveAssemblyReference.cache

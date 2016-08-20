@@ -1,0 +1,7 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.Manual\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.Manual\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.Manual\Nop.Plugin.Payments.Manual.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.Manual\Nop.Plugin.Payments.Manual.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Payments.Manual\obj\Debug\Nop.Plugin.Payments.Manual.csprojResolveAssemblyReference.cache
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Payments.Manual\obj\Debug\Nop.Plugin.Payments.Manual.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Payments.Manual\obj\Debug\Nop.Plugin.Payments.Manual.pdb

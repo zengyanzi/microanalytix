@@ -1,0 +1,6 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.USPS\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.USPS\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plugin.Shipping.USPS.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Shipping.USPS\Nop.Plugin.Shipping.USPS.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Shipping.USPS\obj\Debug\Nop.Plugin.Shipping.USPS.pdb

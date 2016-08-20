@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=Jenny-PC;Initial Catalog=MicroAnalytix;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=freelance007;MultipleActiveResultSets=True

@@ -1,0 +1,6 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Nop.Plugin.DiscountRules.CustomerRoles.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Nop.Plugin.DiscountRules.CustomerRoles.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Debug\Nop.Plugin.DiscountRules.CustomerRoles.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Debug\Nop.Plugin.DiscountRules.CustomerRoles.pdb

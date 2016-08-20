@@ -1,0 +1,6 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Debug\Nop.Plugin.Payments.PayPalStandard.pdb

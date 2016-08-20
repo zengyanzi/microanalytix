@@ -1,0 +1,6 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\SMS.Verizon\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\SMS.Verizon\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\SMS.Verizon\Nop.Plugin.SMS.Verizon.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.SMS.Verizon\obj\Debug\Nop.Plugin.SMS.Verizon.pdb

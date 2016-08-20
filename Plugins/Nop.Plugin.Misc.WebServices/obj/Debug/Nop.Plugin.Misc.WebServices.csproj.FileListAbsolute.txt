@@ -1,0 +1,8 @@
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.WebServices\Description.txt
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.WebServices\logo.jpg
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\NopService.svc
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.WebServices\Remote\web.config
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.dll
+D:\micro\micronzlocal\Presentation\Nop.Web\Plugins\Misc.WebServices\Nop.Plugin.Misc.WebServices.pdb
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.dll
+D:\micro\micronzlocal\Plugins\Nop.Plugin.Misc.WebServices\obj\Debug\Nop.Plugin.Misc.WebServices.pdb
