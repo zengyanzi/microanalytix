@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+}
+<div class="page home-page">
+    <div class="page-body">
+        @Html.Widget("home_page_top")
+        @Html.Action("TopicBlock", "Topic", new { systemName = "HomePageText" })
+        @Html.Action("HomepageCategories", "Catalog")
+        @Html.Action("HomepageProducts", "Catalog")
+        @Html.Action("HomepageBestSellers", "Catalog")
+        @Html.Action("HomePageNews", "News")
+        @Html.Action("HomePagePolls", "Poll")
+        @Html.Widget("home_page_bottom")
+    </div>
+	 <div class="layapptop">
+
+            <div class="server_box">
+                <a class="server" href="contactus">
+                    <img style="width:98px;height:58px"  src="../../Content/images/contact.png" >
+                </a>
+                <div class="server_con">
+                    <i class="icon_a"></i>
+                    <h2>1800 643 339</h2>
+                    <p>worktime 9:00-17:00</p>
+                </div>
+           </div>
+            
+       
+    </div>
+</div>

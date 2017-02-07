@@ -1,0 +1,43 @@
+﻿@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.Themes
+@{
+    var currentThemeName = EngineContext.Current.Resolve<IThemeContext>().WorkingDesktopTheme;
+    var logoPath = "~/Themes/" + currentThemeName + "/Content/images/logo.gif";
+}
+
+<div class="header">
+    @Html.Widget("header")
+    <div class="header-logo">
+        <a href="@Url.RouteUrl("HomePage")">
+            <img title="" alt="" src="@Url.Content(logoPath)">
+        </a>
+        <font color="#0055A5" size="3" style="font-weight:bold">Tel: 1800 643 339</font>
+    </div>
+    <div class="header-links-wrapper">
+        @Html.Action("HeaderLinks", "Common")
+        @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+    </div>
+    <div class="search-box">
+       
+        @Html.Action("SearchBox", "Catalog")
+  	<div>You may like:&nbsp;&nbsp;
+            <ul>
+                <li style="width:100px;"><a href="search?q=Filter+paper" target="_blank">Filter Paper</a></li>
+                <li style="width:100px;"><a href="search?q=membrane" target="_blank">Membrane filter</a></li>
+                <li style="width:100px;"><a href="search?q=syring" target="_blank">Syringe filter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header-selectors-wrapper">
+        <div class="tax-display-type-selector">
+            @Html.Action("TaxTypeSelector", "Common")
+        </div>
+        <div class="currency-selector">
+            @Html.Action("CurrencySelector", "Common")
+        </div>
+        <div class="language-selector">
+            @Html.Action("LanguageSelector", "Common")
+        </div>
+        @Html.Widget("header_selectors")
+    </div>
+</div>

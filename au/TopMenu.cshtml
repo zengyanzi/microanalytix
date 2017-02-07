@@ -1,0 +1,313 @@
+@model TopMenuModel
+@using Nop.Core.Domain
+@using Nop.Core.Infrastructure
+@using Nop.Web.Models.Catalog;
+@{
+    var isRtl = this.ShouldUseRtlTheme();
+    var supportResponsive = EngineContext.Current.Resolve<StoreInformationSettings>().ResponsiveDesignSupported;
+    var categories = Nop.Core.Infrastructure.EngineContext.Current.Resolve<Nop.Services.Catalog.ICategoryService>().GetAllCategories();
+    var pictureService = EngineContext.Current.Resolve<Nop.Services.Media.IPictureService>();
+    var _mediaSettings = EngineContext.Current.Resolve<Nop.Core.Domain.Media.MediaSettings>();
+    int pictureSize = _mediaSettings.CategoryThumbPictureSize;
+    var manufacturerService = EngineContext.Current.Resolve<Nop.Services.Catalog.IManufacturerService>();
+    var manufacturers = manufacturerService.GetAllManufacturers();
+    int manufacturersPictureSize = _mediaSettings.ManufacturerThumbPictureSize;
+}
+
+@helper RenderCategoryLine(CategorySimpleModel category, int level, bool responsiveMobileMenu)
+{
+    <li>
+        <a href="@Url.RouteUrl("Category", new { SeName = category.SeName })">
+            @category.Name
+            @if (category.NumberOfProducts.HasValue)
+            {
+                <text> </text>@T("Categories.TotalProducts", category.NumberOfProducts.Value)
+            }
+        </a>
+        @{
+            var levelClass = "";
+            if (level == 0)
+            {
+                levelClass = "firstLevel";
+                <div class="top-menu-triangle"></div>
+            }
+            if (category.SubCategories.Count > 0)
+            {
+                if (responsiveMobileMenu)
+                {
+                    <span class="expand">&nbsp;</span>
+                }
+                <ul class="sublist @levelClass">
+                    @foreach (var subCategory in category.SubCategories)
+                    {
+                        @RenderCategoryLine(subCategory, level + 1, responsiveMobileMenu)
+                    }
+                </ul>
+            }
+        }
+    </li>
+}
+
+
+<ul class="top-menu container">
+
+    @Html.Widget("header_menu_before")
+
+    <li><a href="@Url.RouteUrl("HomePage")"><i class="glyphicon glyphicon-home"></i></a></li>
+
+    @if (Model.Categories.Count > 0)
+    {
+        <li class="has-mega-menu">
+            <a href="#" class="">
+                SHOP BY CATEGORY
+            </a>
+            <div class="top-menu-triangle"></div>
+            <div class="mega-menu">
+                <div class="row">
+                    @foreach (var category in Model.Categories)
+                    {
+                        var cat = categories.Where(c => c.Name == category.Name).SingleOrDefault();
+                        var pictureId = cat.PictureId;
+                        var picURL = pictureService.GetPictureUrl(pictureId, pictureSize);
+
+                        <div class="col-xs-12 col-md-3 holder">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="group-heading"><strong>@category.Name</strong></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-md-5 visible-md">
+                                    <div class="img-holder">
+                                        <a href="@Url.RouteUrl("Category", new { SeName = category.SeName })"><img style="border: none; " src="@picURL" alt=""></a>
+                                    </div>
+                                </div>
+                                @if (category.SubCategories.Count > 0)
+                                {
+                                    <div class="col-xs-12 col-md-7">
+                                        <ul>
+
+                                            @{
+                                    var subCategoryCounter = 1;
+                                            }
+                                            @foreach (var subCategory in category.SubCategories)
+                                            {
+                                                if (subCategoryCounter <= 3)
+                                                {
+                                                    <li><a href="@Url.RouteUrl("Category", new { SeName = subCategory.SeName })">@subCategory.Name</a></li>
+                                                }
+                                                else
+                                                {
+                                                    <li><a href="@Url.RouteUrl("Category", new { SeName = category.SeName })"><strong>View All</strong></a></li>
+                                                    break;
+
+                                                }
+
+                                                subCategoryCounter++;
+                                            }
+                                        </ul>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div><!-- /.mega-menu -->
+        </li>
+    }
+
+    @*Brands*@
+
+    <li class="has-mega-menu">
+
+        <a href="@Url.RouteUrl("ManufacturerList")">BRANDS</a>
+        <div class="top-menu-triangle"></div>
+        <div class="mega-menu">
+            <div class="row">
+                @foreach (var item in manufacturers)
+                {
+                    var pictureId = item.PictureId;
+                    var picURL = pictureService.GetPictureUrl(pictureId, manufacturersPictureSize);
+                    <div class="col-xs-12 col-md-3 holder">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="group-heading"><strong>@item.Name</strong></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 visible-md">
+                                <div class="img-holder">
+                                    <a href="@Url.RouteUrl("Manufacturer", new { SeName = item.Name.ToLower().Replace(" ", "-") })" title="@item.MetaTitle">
+                                        <img src="@picURL" title="@item.Name" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+        </div>
+    </li>
+
+   <li class="has-mega-menu"><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("promotions") })">PROMOTIONS</a>
+
+       <div class="top-menu-triangle"></div>
+        <div class="mega-menu">
+            <div class="row">
+                <div class="col-xs-4 col-md-4 "  >
+                    <div class="img-holder">
+                        <a href="products-on-promotion">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/step1.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                            <li style="list-style:none;color:#757b81">Enjoy our website</li>
+                            <li style="list-style:none;color:#757b81">Enjoy our promotion</li>
+                            <li style="list-style:none;color:#757b81">Enjoy your account</li>
+                        </ul>
+                       </a>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <div class="img-holder">
+                        <a href="products-on-promotion">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/step2.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left ">
+                            <li style="list-style:none;color:#757b81">Find your items</li>
+                            <li style="list-style:none;color:#757b81">Add to shopping cart</li>
+                            <li style="list-style:none;color:#757b81">Just check out</li>
+                        </ul>
+                       </a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-4" >
+                    <div class="img-holder">
+                        <a href="products-on-promotion">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/step3.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                            <li style="list-style:none;color:#757b81">Convenient</li>
+                            <li style="list-style:none;color:#757b81">Fast</li>
+                            <li style="list-style:none;color:#757b81">Easy</li>
+                        </ul>
+                       </a>
+                    </div>
+
+            </div>
+        </div>
+
+   </li>
+
+    <li class="has-mega-menu"><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("aboutus") })">ABOUTUS</a>
+
+ <div class="top-menu-triangle"></div>
+        <div class="mega-menu">
+            <div class="row">
+                <div class="col-xs-4 col-md-4 "  >
+                    <div class="img-holder">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/who.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                            <li style="list-style:none;color:#757b81">MicroAnalytix is an Australian owned laboratory supply company which was established in 1988. Since then, the organisation has grown to providing laboratory products ...<a href="about-us" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                       </a>
+                    </div>
+                    
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <div class="img-holder">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/what.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left ">
+                            <li style="list-style:none;color:#757b81">We have purpose built offices in Melbourne, Queensland with our head office and warehouse located in Sydney. Auckland, in New Zealand's North Island is our NZ head office ...<a href="about-us" style="text-decoration:underline">Learn more</a></li>
+
+                        </ul>
+                       </a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-md-4" >
+                    <div class="img-holder">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/about.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                            <li style="list-style:none;color:#757b81">More recently, Microanalytix has been focusing on the introduction of new product lines and have become sort after technical advisors on numerous applications and products...<a href="about-us" style="text-decoration:underline">Learn more</a></li>
+    
+                        </ul>
+                       </a>
+                    </div>
+
+            </div>
+        </div>
+
+
+   </li>
+
+    @if (Model.BlogEnabled)
+    {
+        <li><a href="@Url.RouteUrl("Blog")">APPLICATIONS & TECHNOLOGY</a></li>
+    }
+    <li><a href="@Url.RouteUrl("ContactUs")">CONTACTUS</a></li>
+
+    @Html.Widget("header_menu_after")
+</ul>
+
+<script type="text/javascript">
+    $('li', '.top-menu').on('mouseenter', function () {
+        $('a', $(this)).first().addClass('hover');
+        if (!$(this).parent().hasClass('top-menu')) {
+            var width = $(this).innerWidth();
+            $('.sublist', $(this)).first().css('@(isRtl ? "right" : "left")', width + 15);
+        }
+        $('.sublist', $(this)).first().addClass('active');
+        $('.top-menu-triangle', $(this)).addClass('active');
+    });
+
+    $('li', '.top-menu').on('mouseleave', function () {
+        $('a', $(this)).first().removeClass('hover');
+        $('.sublist', $(this)).first().removeClass('active');
+        $('.top-menu-triangle', $(this)).removeClass('active');
+    });
+
+</script>
+
+@if (supportResponsive)
+{
+    if (Model.Categories.Count > 0)
+    {
+        <div id="mob-menu-button">
+            <a href="">
+                <span class="icon"><span class="line"></span><span class="line"></span><span class="line"></span></span>
+                <span>@T("Categories")</span>
+            </a>
+        </div>
+        <ul class="mob-top-menu">
+            @Html.Widget("mob_header_menu_before")
+            @foreach (var category in Model.Categories)
+            {
+                @RenderCategoryLine(category, 0, true)
+            }
+            @*do not display default menu items when we don't have any category to display*@
+            @Html.Widget("mob_header_menu_after")
+        </ul>
+
+        <script type="text/javascript">
+            $('a', $('#mob-menu-button')).toggle(function () {
+                $('.mob-top-menu').addClass('show');
+            },
+                function () {
+                    $('.mob-top-menu').removeClass('show');
+                }
+            );
+
+            $(function ($) {
+                $('.mob-top-menu .expand').click(function () {
+                    var parent = $(this).parent();
+                    if (parent.hasClass('active')) {
+                        $(".sublist:first", parent).hide(300);
+                        parent.removeClass('active');
+                    } else {
+                        $(".sublist:first", parent).show(300);
+                        parent.addClass('active');
+                    }
+                });
+            });
+        </script>
+    }
+}
