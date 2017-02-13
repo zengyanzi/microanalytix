@@ -241,7 +241,35 @@
 
     @if (Model.BlogEnabled)
     {
-        <li><a href="@Url.RouteUrl("Blog")">APPLICATIONS & TECHNOLOGY</a></li>
+        <li><a href="@Url.RouteUrl("Blog")">APPLICATIONS & TECHNOLOGY</a>
+			<div class="top-menu-triangle"></div>
+              <div  class="mega-menu">
+                 <div class="row">
+                    <div class="col-xs-4 col-md-4 ">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/air.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                             <li style="list-style:none;color:#757b81">MicroAnalytix is an Australian owned laboratory supply company which was established in 1988. Since then, the organisation has grown to providing laboratory products ...<a href="blog/tag/air" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-md-4 ">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/soil.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                             <li style="list-style:none;color:#757b81">MicroAnalytix is an Australian owned laboratory supply company which was established in 1988. Since then, the organisation has grown to providing laboratory products ...<a href="blog/tag/air" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-md-4 ">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/water.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                             <li style="list-style:none;color:#757b81">MicroAnalytix is an Australian owned laboratory supply company which was established in 1988. Since then, the organisation has grown to providing laboratory products ...<a href="about-us" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                    </div>
+                 </div>
+
+
+              </div>
+
+
+        </li>
     }
     <li><a href="@Url.RouteUrl("ContactUs")">CONTACTUS</a></li>
 
