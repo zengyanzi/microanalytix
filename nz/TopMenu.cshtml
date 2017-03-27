@@ -240,7 +240,34 @@
 
     @if (Model.BlogEnabled)
     {
-        <li><a href="@Url.RouteUrl("Blog")">APPLICATIONS & TECHNOLOGY</a></li>
+        <li class="has-mega-menu"><a href="@Url.RouteUrl("Blog")">APPLICATIONS & TECHNOLOGY</a>
+	      <div class="top-menu-triangle"></div>
+              <div  class="mega-menu">
+                <div class="row">
+  
+					<div class="col-xs-4 col-md-4 ">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/Environmental.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                             <li style="list-style:none;color:#757b81">MicroAnalytix offers interactive filter selection tools so you can quickly and easily find a filtration product that will work well for you ...<a href="environmental-testing-for-air" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                    </div>
+					<div class="col-xs-4 col-md-4 ">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/Whirl-Pak.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                             <li style="list-style:none;color:#757b81">MicroAnalytix offers the applications  four important points about our amazing Whirl-Pak® sample bags ...<a href="learn-more-about-whirl-pak-sample-bags" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                    </div>
+					<div class="col-xs-4 col-md-4 ">
+                        <img style="width:50%;height:50%;float:left" src="../../Content/images/others.png" >
+                        <ul style="float:left;margin-top:5px;text-align:left">
+                             <li style="list-style:none;color:#757b81">MicroAnalytix offers wonderful online shopping experience for our customers ...<a href="how-to-place-an-order" style="text-decoration:underline">Learn more</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+              </div>
+	</li>
     }
     <li><a href="@Url.RouteUrl("ContactUs")">CONTACTUS</a></li>
 
