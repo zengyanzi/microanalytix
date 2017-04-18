@@ -1,4 +1,4 @@
-﻿@model TopMenuModel
+@model TopMenuModel
 @using Nop.Core.Domain
 @using Nop.Core.Infrastructure
 @using Nop.Web.Models.Catalog;
@@ -151,7 +151,7 @@
         </div>
     </li>
 
-   <li ><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("promotions") })">PROMOTIONS</a>
+     <li class="has-mega-menu"><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("promotions") })">PROMOTIONS</a>
 
        <div class="top-menu-triangle"></div>
         <div class="mega-menu">
@@ -161,8 +161,8 @@
                         <a href="products-on-promotion">
                         <img style="width:50%;height:50%;float:left" src="../../Content/images/Centrifuge Tubes Graduated.jpg" >
                         <ul style="float:left;margin-top:5px;margin-left:5px;text-align:left">
-                            <li style="list-style:none;color:#757b81">34117F:$49.50/500</li>
-                            <li style="list-style:none;color:#757b81">32104F:$64.00/500</li>
+                            <li style="list-style:none;color:#757b81">34117F:$63.00/500</li>
+                            <li style="list-style:none;color:#757b81">32104F:$80.00/500</li>
                             <li style="list-style:none;color:#757b81">Learn more</li>
                         </ul>
                        </a>
@@ -174,8 +174,8 @@
                         <a href="products-on-promotion">
                         <img style="width:50%;height:50%;float:left" src="../../Content/images/filter paper.jpg" >
                         <ul style="float:left;margin-top:5px;margin-left:5px;text-align:left ">
-                            <li style="list-style:none;color:#757b81">1822-025:$29.00/100</li>
-                            <li style="list-style:none;color:#757b81">1822-047:$39.00/100</li>
+                            <li style="list-style:none;color:#757b81">1822-025:$32.60/100</li>
+                            <li style="list-style:none;color:#757b81">1822-047L$43.50/100</li>
                             <li style="list-style:none;color:#757b81">Learn more</li>
                         </ul>
                        </a>
@@ -187,8 +187,8 @@
                         <img style="width:50%;height:50%;float:left" src="../../Content/images/Syringe Filters.jpg" >
                         <ul style="float:left;margin-top:5px;margin-left:5px;text-align:left">
                             <li style="list-style:none;color:#757b81">MSV923-C$155.00/1000</li>
-                            <li style="list-style:none;color:#757b81">MSV042-C$166.00/1000</li>
-                            <li style="list-style:none;color:#757b81">Learn more</li>
+                            <li style="list-style:none;color:#757b81">MSV042-C$220.00/1000</li>
+                            <li style="list-style:none;color:#757b81">Easy</li>
                         </ul>
                        </a>
                     </div>
@@ -200,7 +200,7 @@
 
     <li class="has-mega-menu"><a href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("aboutus") })">ABOUTUS</a>
 
- <div class="top-menu-triangle"></div>
+<div class="top-menu-triangle"></div>
         <div class="mega-menu">
             <div class="row">
                 <div class="col-xs-4 col-md-4 "  >
@@ -236,13 +236,12 @@
             </div>
         </div>
 
-
    </li>
 
     @if (Model.BlogEnabled)
     {
         <li class="has-mega-menu"><a href="@Url.RouteUrl("Blog")">APPLICATIONS & TECHNOLOGY</a>
-			<div class="top-menu-triangle"></div>
+	      <div class="top-menu-triangle"></div>
               <div  class="mega-menu">
                 <div class="row">
   
@@ -255,7 +254,7 @@
 					<div class="col-xs-4 col-md-4 ">
                         <img style="width:50%;height:50%;float:left" src="../../Content/images/Whirl-Pak.png" >
                         <ul style="float:left;margin-top:5px;text-align:left">
-                             <li style="list-style:none;color:#757b81">MicroAnalytix offers the applications  four important points about our amazing Whirl-Pak® sample bags ...<a href="learn-more-about-whirl-pak-sample-bags" style="text-decoration:underline">Learn more</a></li>
+                             <li style="list-style:none;color:#757b81">MicroAnalytix offers the applications  four important points about our amazing Whirl-Pak� sample bags ...<a href="learn-more-about-whirl-pak-sample-bags" style="text-decoration:underline">Learn more</a></li>
                         </ul>
                     </div>
 					<div class="col-xs-4 col-md-4 ">
@@ -268,8 +267,7 @@
 
                 </div>
               </div>
-
-        </li>
+	</li>
     }
     <li><a href="@Url.RouteUrl("ContactUs")">CONTACTUS</a></li>
 
