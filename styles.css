@@ -161,10 +161,9 @@ input[type="text"]:disabled {
 .master-wrapper-main {
   font-family: arial,helvetica,sans-serif;
   color: #5C5B5B;
-  display: inline-block;
-  /*width:75%;
+  width:75%;
   margin:0 auto;
-  max-width:1170px;*/
+  max-width:1170px;
   background:#fff;
 }
 
@@ -177,7 +176,6 @@ input[type="text"]:disabled {
   background: #FFF;
   display: inline;
   border-radius: 5px;
-  text-align: left;
 }
 
 /* two column master page */
@@ -187,9 +185,7 @@ input[type="text"]:disabled {
   margin: 10px 0  10px 5px;
   display: inline;
 }
-.master-wrapper-main .side-2 li{
-	text-align: left;
-}
+
 .master-wrapper-main .center-2 {
   float: left;
   width: 710px;
@@ -199,7 +195,6 @@ input[type="text"]:disabled {
   background: #FFF;
   display: inline;
   border-radius: 5px;
-  text-align: left;
 }
 
 /* three column master page */
@@ -208,7 +203,6 @@ input[type="text"]:disabled {
   width: 190px;
   margin: 10px 0;
   display: inline;
-  text-align: left;
 }
 
 .master-wrapper-main .center-3 {
@@ -221,7 +215,6 @@ input[type="text"]:disabled {
   display: inline;
   overflow: hidden;
   border-radius: 5px;
-  text-align: left;
 }
 
 .master-wrapper-main .rightside-3 {
@@ -229,7 +222,6 @@ input[type="text"]:disabled {
   width: 190px;
   margin: 10px 0;
   display: inline;
-  text-align: left;
 }
 
 /* HEADER AND MENU */
@@ -2792,7 +2784,7 @@ td.fieldname {
 .server{
   width: 99px;
   height: 68px;
-
+  border:1px solid #e4e3e3;
   background-position: -59px 11px;
   background-color: #fff;
   background-repeat: no-repeat;
@@ -2828,7 +2820,7 @@ td.fieldname {
 }
 .server:hover{
   background-position: -59px -50px;
-    background-color: #1174ca;
+    background-color: #fe836a;
     border-color: #fe836a;
 }
 
@@ -3472,7 +3464,7 @@ td.fieldname {
   margin-bottom: 10px;
 }
 
-.news-items .read-more {
+.blog-posts .read-more,.news-items .read-more {
   font-weight: 700;
   text-decoration: none;
   color: #5C5B5B;
@@ -3605,6 +3597,17 @@ td.fieldname {
 }
 
 /* BLOGS */
+
+.post-body{
+	height:10.5em;
+	overflow:hidden;
+	text-align:left;
+}
+.page-body>.post-body{
+	height:100%;
+	text-align:left;
+}
+
 .blog-page .blog-posts {
   margin: 0 5px;
   padding: 0;
@@ -6021,127 +6024,4 @@ input[type="text"], input[type="password"] {
   color:#5C5B5B;
 }
 }
-/*add for responsible display*/
-.master-wrappermain{
-	text-align: center;
-}
 
-/*css reset start*/
-*{
-margin:0;
-padding:0;
-}
-ul,li{
-list-style: none;
-}
-/*css reset end*/
-
-/*css public start*/
-.floatfix {
-*zoom: 1;
-}
-.floatfix:after {
-content: "";
-display: table;
-clear: both;
-}
-/*css public end*/
-
-/*slider start*/
-.slider-contaner{
-width:100%;
-position:relative;
-}
-.slider-item + .slider-item{
-opacity:0;
-}
-.slider-item{
-width:100%;
-position:absolute;
-animation-timing-function: linear;
-animation-name:fade;
-animation-iteration-count: infinite;
-background-size:100%;
-}
-.focus-container{
-position:absolute;
-z-index:7;
-margin:0 auto;
-left:0;
-right:0;
-}
-.focus-container li{
-width:10px;
-height:10px;
-border-radius:50%;
-float:left;
-margin-right:10px;
-background:#fff;
-}
-.focus-item{
-width:100%;
-height:100%;
-border-radius:inherit;
-animation-timing-function: linear;
-animation-name:fade;
-animation-iteration-count: infinite;
-}
-.focus-item2,.focus-item3,.focus-item4,.focus-item5{
-opacity:0;
-}
-.focus-container ul{
-margin-left:46%;
-}
-/*设置轮播焦点的位置*/
-.focus-container{
-bottom:2%;
-}
-/*设置当前图片焦点的颜色*/
-.focus-item{
-background:#51B1D9;
-}
-/*设置动画，请根据实际需要修改秒数*/
-.slider-item,.focus-item{
-animation-duration: 10s;
-}
-.slider-item1,.focus-item1{
-animation-delay: -1s;
-}
-.slider-item2,.focus-item2{
-animation-delay: 3s;
-}
-
-@keyframes fade{
-0%{
-opacity:0;
-z-index:2;
-}
-5%{
-opacity:1;
-z-index: 1;
-}
-20%{
-opacity:1;
-z-index:1;
-}
-25%{
-opacity:0;
-z-index:0;
-}
-100%{
-opacity:0;
-z-index:0;
-}
-}
-/*设置背景，响应式请利用媒体查询根据断点修改路径*/
-.slider-item1{
-background-image:url(../../../Content/images/pink.png);
-}
-.slider-item2{
-background-image:url(../../../Content/images/blue.png);
-}
-
-/*设置图片的高度，请根据具体需要修改百分比，响应式及时修改此值*/
-.slider,.slider-item{
-padding-bottom:80%;
-}
