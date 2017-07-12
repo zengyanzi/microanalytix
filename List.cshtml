@@ -40,11 +40,13 @@
                 <div class="post">
                     <div class="post-head">
                         <a class="post-title" href="@Url.RouteUrl("BlogPost", new { SeName = item.SeName })">@item.Title</a>
-                        <span class="post-date">-@item.CreatedOn.ToString("D")</span>
+                        <span class="post-date" stlye="color:#1174ca">-@item.CreatedOn.ToString("D")</span>
                     </div>
-				   <div class="post-body" >
+				   <!--<div class="post-body" >
 							@Html.Raw(item.Body)
 						</div>
+					-->
+					<BR>
 					<a href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })" class="read-more">More
 							@T("News.MoreInfo")</a>
                     @if (item.Tags.Count > 0)

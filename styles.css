@@ -3628,9 +3628,10 @@ td.fieldname {
 }
 
 .blog-page .blog-posts .post a.post-title {
-  color: #444;
-  text-decoration: none;
+  color: #1174ca;
+  text-decoration: underline;
   font-size: 1.2em;
+  font-weight: bolder;
 }
 
 .blog-page .blog-posts .post a.post-title:hover {
