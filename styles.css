@@ -4017,6 +4017,10 @@ td.fieldname {
   text-decoration: underline;
 }
 
+.search-page .picture {
+  min-height: 125px;
+}
+
 /* PASSWORD RECOVERY AND NEWSLETTER PAGES */
 .password-recovery-page .page-body, newsletter-page .page-body {
   margin: 0;
