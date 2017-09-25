@@ -6038,7 +6038,7 @@ input[type="text"], input[type="password"] {
 
 .master-wrapper-main .center-2 {
   float: left;
-  width: 600px;
+  width:75%;
   min-height: 400px;
   padding: 10px;
   margin: 10px 0 10px 10px;
@@ -6050,7 +6050,7 @@ input[type="text"], input[type="password"] {
 /* three column master page */
 .master-wrapper-main .center-3 {
   float: left;
-  width:500px;
+  width:70%;
   min-height: 400px;
   padding: 10px;
   margin: 10px;
@@ -6060,12 +6060,6 @@ input[type="text"], input[type="password"] {
   border-radius: 5px;
 }
 
-.master-wrapper-main .rightside-3 {
-  float: right;
-  width: 190px;
-  margin: 10px 0;
-  display: inline;
-}
 
 .block block-newsletter{
 	display: none;
