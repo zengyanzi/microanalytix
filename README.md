@@ -279,3 +279,9 @@ how to update nopcommerce homepage layout  
 }
 3generate
 refresh
+
+
+//update the promotion page
+<p>&nbsp;</p>
+<p><iframe style="width: 600px; height: 800px;" src="/Content/files/Cell Strainer.pdf" width="600" height="150" frameborder="0"></iframe></p>
+<p>&nbsp;</p>
