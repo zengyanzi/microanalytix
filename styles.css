@@ -6009,7 +6009,11 @@ input[type="text"], input[type="password"] {
 }
 .holder{
   margin:15px 0 0 0;
-  min-height:130px !important;
+  min-height:135px !important;
+}
+.categoryholder{
+  margin:15px 0 0 0;
+  min-height:210px !important;
 }
 .group-heading{
   font-size:15px;
