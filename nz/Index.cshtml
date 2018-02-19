@@ -1,5 +1,10 @@
-﻿@{
+@model ProductEmailAFriendModel
+@using Nop.Web.Models.Catalog;
+@using Nop.Web.Models.Common;
+@{
     Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+        //title
+    
 }
 <div class="page home-page">
     <div class="page-body">
@@ -12,33 +17,67 @@
         @Html.Action("HomePagePolls", "Poll")
         @Html.Widget("home_page_bottom")
     </div>
-	 <div class="layapptop">
-            <!--<div class="app">
-                 <a  href="products-on-promotion">
-                    <section class="slider-contaner">
-                    <ul class="slider">
-                    <li class="slider-item slider-item1"></li>
-                    <li class="slider-item slider-item2"></li>
-                    </ul>
-                    </section>
-                </a>
-                <div class="app_box">
-                    <i class="icon_a"></i>
-                    <div class="app_tab_con">
-                        <img style="width:98px;height:98px"  src="../../Content/images/tree.jpg" >
-                    </div>
-                    <h2>Click to open gift</h2>
-                </div>
- 			</div>-->          
-            <div class="server_box">
-                <a class="server" href="contactus">
-                    <img style="width:98px;height:58px"  src="../../Content/images/ContactUs.png" >
-                </a>
-                <div class="server_con">
-                    <i class="icon_a"></i>
-                    <h2>0800 1 289 266</h2>
-                    <p>worktime 9:00-17:00</p>
-                </div>
+    <div class="layapptop">
+    <!--<div class="app">
+         <a  href="products-on-promotion">
+            <section class="slider-contaner">
+            <ul class="slider">
+            <li class="slider-item slider-item1"></li>
+            <li class="slider-item slider-item2"></li>
+            </ul>
+            </section>
+        </a>
+        <div class="app_box">
+            <i class="icon_a"></i>
+            <div class="app_tab_con">
+                <img style="width:98px;height:98px"  src="../../Content/images/tree.jpg" >
             </div>
+            <h2>Click to open gift</h2>
+        </div>
+    </div>-->          
+        <div class="server_box">
+            <a class="server" href="contactus">
+                <img style="width:98px;height:58px"  src="../../Content/images/ContactUs.png" >
+            </a>
+            <div class="btn">Footy Tipping</div>
+            <div class="server_con">
+                <i class="icon_a"></i>
+                <h2>0800 1 289 266</h2>
+                <p>worktime 9:00-17:00</p>
+            </div>
+        </div>
+    </div>
+   <div id="footy">
+        <div>
+            <input id="FriendEmail" name="FriendEmail" type="text"/>
+            <input id="YourEmailAddress" name="YourEmailAddress" type="text"/>
+            <input id="team" name="team" type="text" />
+
+        </div>
+        <input id="footysubmit" type="button" value="submit"/>
    </div>
 </div>
+
+<script>
+    $(function() {
+        $('.btn').click(function () {
+            $("#footy").show(0.5);
+        })
+        $("#footysubmit").click(function(){
+   
+            var YourEmailAddress = $("#YourEmailAddress").val();
+            var team = $("#team").val();
+            var FriendEmail=$("#FriendEmail").val();                          
+            var data = {"YourEmailAddress":YourEmailAddress,
+                        "FriendEmail":FriendEmail,
+                        "PersonalMessage":team,
+                        "send-email":"Send email"};
+            $.ajax({  
+                type : "post",  
+                url : "/productemailafriend/122",  
+                data : data,  
+                async : false,  
+            }); 
+        });
+    })
+</script>
