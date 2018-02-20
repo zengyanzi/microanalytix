@@ -1,90 +1,197 @@
-﻿@{
+﻿
+
+@{
+
     Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
 }
+
 <div class="page home-page">
+
     <div class="page-body">
+
         @Html.Widget("home_page_top")
+
         @Html.Action("TopicBlock", "Topic", new { systemName = "HomePageText" })
+
         @Html.Action("HomepageCategories", "Catalog")
+
         @Html.Action("HomepageProducts", "Catalog")
+
         @Html.Action("HomepageBestSellers", "Catalog")
+
         @Html.Action("HomePageNews", "News")
+
         @Html.Action("HomePagePolls", "Poll")
+
         @Html.Widget("home_page_bottom")
+
     </div>
+
     <div class="footapp" >
+
         <img style="width:158px;height:158px"  src="../../Content/images/FOOTY.png" >
+
     </div>
+
     <div class="layapptop">
+
         <!--<div class="app">
+
              <a  href="products-on-promotion">
+
                 <section class="slider-contaner">
+
                 <ul class="slider">
+
                 <li class="slider-item slider-item1"></li>
+
                 <li class="slider-item slider-item2"></li>
+
                 </ul>
+
                 </section>
+
             </a>
+
             <div class="app_box">
+
                 <i class="icon_a"></i>
+
                 <div class="app_tab_con">
+
                     <img style="width:98px;height:98px"  src="../../Content/images/tree.jpg" >
+
                 </div>
+
                 <h2>Click to open gift</h2>
+
             </div>
+
         </div>-->          
+
         <div class="server_box">
+
             <a class="server" href="contactus">
+
                 <img style="width:98px;height:58px"  src="../../Content/images/ContactUs.png" >
+
             </a>
+
     
+
             <div class="server_con">
+
                 <i class="icon_a"></i>
+
                 <h2>1800 643 339</h2>
+
                 <p>worktime 9:00-17:00</p>
+
             </div>
 
+ 
+
         </div>
+
         <div id="footy">
+
             <div>      
+
                 <label>Please input your Email</label><input id="YourEmailAddress" name="YourEmailAddress" type="text"/>
+
                 <br>
+
                 <label>Please choose your team</label>
+
                 <select id="team">
+
                   <option value="NRL">NRL</option>
+
                   <option value="AFL">AFL</option>
+
                 </select>
+
             </div>
 
+                
+            <div id="drag"></div>
             <input id="footysubmit" class="button-1" type="button" value="Send Email"/>
-            <label class="footysend">We will contact you later</label>
-        </div>
-    </div>
-</div>
-<script>
-    $(function() {
-        $('.footapp').click(function () {
-            $("#footy" ).dialog();
-       
-        })
-        $("#footysubmit").click(function(){
-   
-        var YourEmailAddress = $("#YourEmailAddress").val();
-        var team = $("#team").val();
 
-             var data = {"YourEmailAddress":YourEmailAddress,
-            "FriendEmail":"jenny@microanalytix.co.nz",
-            "PersonalMessage":YourEmailAddress+"  register for "+team,
-            "send-email":"Send email"};
-            $.ajax({  
-                type : "post",  
-                url : "productemailafriend/5443",  
-                data : data,  
-                async : false,  
-            }); 
-            $(".footysend").show(0.5);
-                       
+            <label class="footysend">We will contact you later</label>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    $(function() {
+     $('#drag').drag();
+
+
+
+        $('.footapp').click(function () {
+            $("#footy" ).dialog(); 
+        })
+
+        $("#footysubmit").click(function(){
+
+            if($('.drag_text').attr("onselectstart")=="true"){
+
+                var team = $("#team").val();
+
+                var YourEmailAddress=$('#YourEmailAddress').val();
+
+                if(YourEmailAddress==''){
+                    $('#YourEmailAddress').focus();
+                    alert("Please input your Email address");
+                }else{
+                     if(YourEmailAddress.match(/^\w+((-\w+)|(\.\w+))*\@@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)){
+                            var data = {"YourEmailAddress":YourEmailAddress,
+
+                            "FriendEmail":"jenny@microanalytix.co.nz",
+
+                            "PersonalMessage":"Email: "+YourEmailAddress+" Team: "+team,
+
+                            "send-email":"Send email"};
+
+                            $.ajax({  
+
+                                type : "post",  
+
+                                url : "productemailafriend/5443",  
+
+                                data : data,  
+
+                                async : false,  
+
+                            }); 
+
+                            $(".footysend").show(0.5);
+                            $('#YourEmailAddress').val("");
+
+                     }else{
+                         alert("Please input correct Email address");
+                         $('#YourEmailAddress').focus();
+                         return false;
+                     }
+
+                }
+                
+            }else {
+                alert("Please slide to unlock")
+            }
+
 
         });
+
     })
+
 </script>
+
+ 
+
+ 
