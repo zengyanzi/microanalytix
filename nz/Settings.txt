@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=prodigy.enlightenhosting.com;Initial Catalog=MicroAnalytix;Integrated Security=False;Persist Security Info=False;User ID=MicroAnalytix;Password=38suWm86;MultipleActiveResultSets=True
